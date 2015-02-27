@@ -12,4 +12,4 @@ This script is intended to be used as a simple interactive-wrapper to the 'ssh-k
 
 xtrabackup_snapshot.sh
 =
-This bash script is intended to be used as a simple interactive-wrapper to the xtrabackup utility, to take a snapshot of an entire InnoDB MySQL Database, withoout interuption.
+This bash script is intended to be used as a simple interactive-wrapper to the xtrabackup utility, to take a snapshot of an entire InnoDB MySQL Database, without interuption.
