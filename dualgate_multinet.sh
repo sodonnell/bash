@@ -12,7 +12,7 @@
 #
 # $Id: dualgate_multinet.sh,v 1.1 2013/02/09 22:07:45 seanodonnell Exp $
 #
-while getopts "a::i::l::h::" opt; do
+while getopts "a::i::" opt; do
         case $opt in
                 i)
             VLAN_NIC=$OPTARG;
