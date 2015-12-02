@@ -13,3 +13,7 @@ This script is intended to be used as a simple interactive-wrapper to the 'ssh-k
 xtrabackup_snapshot.sh
 =
 This bash script is intended to be used as a simple interactive-wrapper to the xtrabackup utility, to take a snapshot of an entire InnoDB MySQL Database, without interuption.
+
+xtrabackup_cleanup.sh
+=
+This bash script is intended to be executed daily via crontab to purge mysql/innodb database snapshot archives, that were generated via xtrabackup_snapshot.sh, if the archives are over 30 days old. This script can be used for any type of incremental backup archive management, though. 
