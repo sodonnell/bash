@@ -9,7 +9,6 @@ The sole-purpose of this script, was to create a dual-gateway firewall/router, w
 # this script assumes sequential subnet matrix mapping, and should not include the Class C subnet of the VLAN_NIC_IP
 LOWNET=1
 SUBNETS=8
-# i.e. 192.168.${LOWNET}.0/24 - 192.168.8$.${SUBNETS}.0/24
 
 Usage: ./dualgate_multinet.sh -i eth1 -a 192.168.0.254
 
