@@ -6,12 +6,6 @@ dualgate_multinet.sh
 =
 The sole-purpose of this script, was to create a dual-gateway firewall/router, without having to buy a Cisco product..
 
-# this script assumes sequential subnet matrix mapping, and should not include the Class C subnet of the VLAN_NIC_IP
-LOWNET=1
-SUBNETS=8
-
-Usage: ./dualgate_multinet.sh -i eth1 -a 192.168.0.254
-
 ssh-keygen.sh
 =
 This script is intended to be used as a simple interactive-wrapper to the 'ssh-keygen' utility, along with the 'scp' procedures that would generally follow, to distribute your SSH key, after you have properly generated it.
