@@ -14,7 +14,7 @@ xtrabackup_snapshot.sh
 =
 This bash script is intended to be used as a simple interactive-wrapper to the xtrabackup utility, to take a snapshot of an entire InnoDB MySQL Database, without interuption.
 
-xtrabackup_snapshot.sh
+xtrabackup_snapshot_deploy.sh
 =
 This bash script is intended to be used to deploy snapshots created from xtrabackup_snapshot.sh (or any Percona Xtrabackup snapshot, really).
 
