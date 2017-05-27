@@ -39,5 +39,6 @@ if [ -e $ARCHIVEPATH ]; then
 	
 	# restart the staging database
 	sudo service mysqld start
-
+else
+	echo -e "The path that you specified, does not exist. Please try again.\n";
 fi
