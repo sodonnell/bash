@@ -19,8 +19,6 @@ echo -e "\nPlease define the path the Archive you wish to roll-back/deploy:\ni.e
 
 read ARCHIVEPATH;
 
-ARCHIVEPATH=$TMPARCHIVE/$ARCHIVE/
-
 if [ -e $ARCHIVEPATH ]; then
 
 	# shut-down database process
