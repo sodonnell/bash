@@ -2,6 +2,12 @@ random bash scripts
 ===
 Who doesn't love random bash scripts?
 
+configure.rhel7.sh
+=
+Configure Red Hat Enterprise Linux (RHEL) 7.5 to run AWS CLI utilities, PHP 7.3, MySQL 8.0 and Apache 2.4. 
+
+This script is considered experimental for development/testing environments (only). This script and configuration is not intended for current (most) production environments.
+
 dualgate_multinet.sh
 =
 The sole-purpose of this script, was to create a dual-gateway firewall/router, without having to buy a Cisco product..
