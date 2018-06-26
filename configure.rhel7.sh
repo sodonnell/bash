@@ -4,9 +4,6 @@
 #
 # Basic RHEL7.5 configuration script.
 #
-# Configure Amazon Ec2 (RHEL7.5) Instance for 
-# basic LAMP-Stack development and testing.
-#
 # This script is a work-in-progress and intended 
 # for my personal usage (only) for now.
 #
