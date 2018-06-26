@@ -49,6 +49,7 @@ service php73-php-fpm start
 service httpd start
 service mysqld start
 
+# create a basic phpinfo file to confirm apache/php/php-fpm are running; remove once confirmed (for security purposes)
 echo -e "<?php\nphpinfo();\n" > /var/www/html/info.php;
 
 #
