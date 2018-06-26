@@ -24,7 +24,7 @@ yum update yum
 #
 # install basic packages that you normally use
 #
-yum -y install vim tmux screen mcrypt htop irssi wireshark nmap curl wget rsync scp mc ansible
+yum -y install vim tmux screen mcrypt htop irssi wireshark nmap curl wget rsync scp mc
 
 #
 # Install Apache, MySQL and PHP related packages
@@ -56,8 +56,10 @@ echo -e "<?php\nphpinfo();\n" > /var/www/html/info.php;
 #
 
 # install python 3.4 and pip
-yum -y install python34 python34-pip 
+yum -y install python34 python34-pip ansible
 
 # install AWS CLI tools
 pip3 install --upgrade pip
 pip3 install awscli
+
+# install terraform... @todo
