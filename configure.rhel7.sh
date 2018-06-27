@@ -99,14 +99,13 @@ pip3 install awscli
 # install terraform... @todo
 
 # install a Laravel boilerplate
-
 mkdir -p /data/.config;
 mv ~/.config/composer /data/.config/;
-echo -e "\nPATH=\$PATH:/data/.config/composer/vendor/bin";
+echo -e "\nPATH=\$PATH:/data/.config/composer/vendor/bin" >> /etc/bashrc;
 bash
-
 mkdir -p /var/www/php-bin;
 cd /var/www/php-bin;
 artisan new test;
-ln -s /var/www/php-bin/test/public /var/www/html/test;
+chown apache:apache /var/www/html;
+sudo -u apache ln -s /var/www/php-bin/test/public /var/www/html/test;
 # @todo add +FollowSymlinks to httpd.conf
