@@ -111,3 +111,5 @@ artisan new test;
 chown apache:apache /var/www/html;
 sudo -u apache ln -s /var/www/php-bin/test/public /var/www/html/test;
 # @todo add +FollowSymlinks to httpd.conf
+# @todo disable selinux
+# @todo configure laravel storage + bootstrap chmod perms; ugh
