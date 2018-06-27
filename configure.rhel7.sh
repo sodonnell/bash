@@ -38,7 +38,7 @@ yum -y install vim tmux screen mcrypt htop irssi wireshark nmap curl wget rsync 
 yum -y install httpd mysql-community-server 
 
 # install PHP7 packages
-yum -y install php73 php73-php-mbstring php73-php-xml php73-php-fpm php73-php-mysqlnd php73-php-pdo
+yum -y install php73 php73-php-mbstring php73-php-xml php73-php-fpm php73-php-mysqlnd php73-php-pdo php73-php-pecl-zip
 
 # create a default php cli executable (symlink)
 ln -s /usr/bin/php73 /usr/bin/php
@@ -61,6 +61,8 @@ else
 fi
 
 rm composer-setup.php
+
+composer global require "laravel/installer"
 
 # configure php-fpm as a fast-cgi proxy in apache
 echo -e "<FilesMatch \\.php$>\n\tSetHandler \"proxy:fcgi://127.0.0.1:9000\"\n</FilesMatch>\n\n" >> /etc/httpd/conf/httpd.conf;
@@ -90,3 +92,14 @@ pip3 install --upgrade pip
 pip3 install awscli
 
 # install terraform... @todo
+
+# install a Laravel boilerplate
+
+mkdir -p /data/.config;
+mv ~/.config/composer /data/.config/;
+echo -e "\nPATH=\$PATH:/data/.config/composer/vendor/bin";
+bash
+
+mkdir -p /var/www/php-bin;
+cd /var/www/php-bin;
+artisan new test; 
