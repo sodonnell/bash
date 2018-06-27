@@ -98,7 +98,9 @@ pip3 install awscli
 
 # install terraform... @todo
 
-# install a Laravel boilerplate
+# install a Laravel boilerplate;
+# These steps are a pain to remember, 
+# so here we go. Set it, and forget it! Eh.
 mkdir -p /data/.config;
 mv ~/.config/composer /data/.config/;
 echo -e "\nPATH=\$PATH:/data/.config/composer/vendor/bin" >> /etc/bashrc;
