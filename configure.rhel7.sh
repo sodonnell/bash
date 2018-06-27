@@ -7,6 +7,10 @@
 # This script is a work-in-progress and intended 
 # for my personal usage (only) for now.
 #
+# @todo 
+# Add conditioning cases to detect failures 
+# and better handle unexpected issues
+#
 # Sean O'Donnell <sean@seanodonnell.com>
 #
 
@@ -36,12 +40,33 @@ yum -y install httpd mysql-community-server
 # install PHP7 packages
 yum -y install php73 php73-php-mbstring php73-php-xml php73-php-fpm php73-php-mysqlnd php73-php-pdo
 
+# create a default php cli executable (symlink)
+ln -s /usr/bin/php73 /usr/bin/php
+
+#
+# download and install composer
+#
+# modified from composer docs: 
+# https://getcomposer.org/doc/faqs/how-to-install-composer-programmatically.md
+#
+EXPECTED_SIGNATURE="$(wget -q -O - https://composer.github.io/installer.sig)";
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');";
+ACTUAL_SIGNATURE="$(php -r "echo hash_file('SHA384', 'composer-setup.php');")";
+
+if [ "$EXPECTED_SIGNATURE" != "$ACTUAL_SIGNATURE" ]
+then
+    >&2 echo 'ERROR: Invalid composer installer signature'
+else    
+    php composer-setup.php --install-dir=/usr/bin --filename=composer
+fi
+rm composer-setup.php
+
 # configure php-fpm as a fast-cgi proxy in apache
 echo -e "<FilesMatch \\.php$>\n\tSetHandler \"proxy:fcgi://127.0.0.1:9000\"\n</FilesMatch>\n\n" >> /etc/httpd/conf/httpd.conf;
 
 # set daemons to autorun during init.d/systemd
-chkconfig httpd on
 chkconfig php73-php-fpm on
+chkconfig httpd on
 chkconfig mysqld on
 
 # start services
