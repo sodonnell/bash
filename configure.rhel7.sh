@@ -102,4 +102,6 @@ bash
 
 mkdir -p /var/www/php-bin;
 cd /var/www/php-bin;
-artisan new test; 
+artisan new test;
+ln -s /var/www/php-bin/test/public /var/www/html/test;
+# @todo add +FollowSymlinks to httpd.conf
