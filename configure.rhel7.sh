@@ -7,9 +7,14 @@
 # This script is a work-in-progress and intended 
 # for my personal usage (only) for now.
 #
-# @todo 
-# Add conditioning cases to detect failures 
-# and better handle unexpected issues
+# Install Python 3.4, AWS CLI, PHP 7.3, MySQL 8.0, Apache 2.4 and Laravel, 
+# as well as other basic linux-based utilities, on a 
+# freshly installed RHEL7.5 Amazon EC2 Instance.
+#
+# @todo
+#
+# Add conditioning cases to detect failures. 
+# Add more user-friendly procedural output.
 #
 # Sean O'Donnell <sean@seanodonnell.com>
 #
