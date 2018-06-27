@@ -8,8 +8,8 @@
 # for my personal usage (only) for now.
 #
 # Install Python 3.4, AWS CLI, PHP 7.3, MySQL 8.0, Apache 2.4 and Laravel, 
-# as well as other basic linux-based utilities, on a 
-# freshly installed RHEL7.5 Amazon EC2 Instance.
+# as well as other basic linux-based utilities, on a freshly installed 
+# RHEL7.5 Amazon EC2 Instance. 
 #
 # @todo
 #
