@@ -59,6 +59,7 @@ then
 else    
     php composer-setup.php --install-dir=/usr/bin --filename=composer
 fi
+
 rm composer-setup.php
 
 # configure php-fpm as a fast-cgi proxy in apache
