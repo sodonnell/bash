@@ -7,7 +7,7 @@
 # This script is a work-in-progress and intended 
 # for my personal usage (only) for now.
 #
-# Install Python 3.4, AWS CLI, PHP 7.3, MySQL 8.0, Apache 2.4 and Laravel, 
+# Install Python 3.4, AWS CLI, PHP 7.2, MySQL 8.0, Apache 2.4 and Laravel, 
 # as well as other basic linux-based utilities, on a freshly installed 
 # RHEL7.5 Amazon EC2 Instance. 
 #
@@ -42,11 +42,11 @@ yum -y install vim tmux screen mcrypt htop irssi wireshark nmap curl wget rsync 
 # install apache 2.4 and mysql 8.0 (current)
 yum -y install httpd mysql-community-server 
 
-# install PHP7 packages
-yum -y install php73 php73-php-mbstring php73-php-xml php73-php-fpm php73-php-mysqlnd php73-php-pdo php73-php-pecl-zip
+# install PHP7.2 packages
+yum -y install php72 php72-php-mbstring php72-php-xml php72-php-fpm php72-php-mysqlnd php72-php-pdo php72-php-pecl-zip
 
 # create a default php cli executable (symlink)
-ln -s /usr/bin/php73 /usr/bin/php
+ln -s /usr/bin/php72 /usr/bin/php
 
 #
 # download and install composer
@@ -73,12 +73,12 @@ composer global require "laravel/installer"
 echo -e "<FilesMatch \\.php$>\n\tSetHandler \"proxy:fcgi://127.0.0.1:9000\"\n</FilesMatch>\n\n" >> /etc/httpd/conf/httpd.conf;
 
 # set daemons to autorun during init.d/systemd
-chkconfig php73-php-fpm on
+chkconfig php72-php-fpm on
 chkconfig httpd on
 chkconfig mysqld on
 
 # start services
-service php73-php-fpm start
+service php72-php-fpm start
 service httpd start
 service mysqld start
 
