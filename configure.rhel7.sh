@@ -33,13 +33,19 @@ yum update yum
 #
 # install basic packages that you normally use
 #
-yum -y install vim tmux screen mcrypt htop irssi wireshark nmap curl wget rsync scp mc
+yum -y install vim tmux screen mcrypt htop irssi wireshark nmap curl wget rsync scp mc yum-utils
+
+#
+# Install MySQL 5.7. Disable 8.0 repo, enable 5.7 repo. Eh.
+#
+yum-config-manager --disable mysql80-community
+yum-config-manager --enable mysql57-community
 
 #
 # Install Apache, MySQL and PHP related packages
 #
 
-# install apache 2.4 and mysql 8.0 (current)
+# install apache 2.4 and mysql 5.7 (current)
 yum -y install httpd mysql-community-server 
 
 # install PHP7.2 packages
