@@ -6,7 +6,7 @@ ab.sh
 =
 A really simple script to run apache benchmark tests on a series of URLs for a given domain name. This is mostly just a template to use for future stress testing and performance analysis. 
 
-This is very handy for conducting tests on AWS Load-Balancers, API Gateway, EC2 instances, and auto-scaling policies. 
+This is very handy for conducting tests on Amazon Web Services, such as Elastic Load-Balancer, API Gateway, EC2 instances and auto-scaling policies. 
 
 configure.rhel7.sh
 =
